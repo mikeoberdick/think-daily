@@ -32,3 +32,15 @@ function theme_enqueue_styles() {
 
 //Allow Text widgets to execute shortcodes
 add_filter('widget_text', 'do_shortcode');
+
+
+//Archive query to exclude business posts
+function archiveQuery( $wp_query ) {
+
+// only exclude on the archive page
+if( is_archive() ) {
+        set_query_var('category__not_in', '2');
+    }
+}
+
+add_action('pre_get_posts', 'archiveQuery' );

@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Skippy Sharpie';
+    src: url('skippysharpie.woff2') format('woff2'),
+         url('skippysharpie.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

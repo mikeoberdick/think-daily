@@ -11,6 +11,11 @@
 require get_stylesheet_directory() . '/inc/acf.php';
 
 /**
+ * Setup Comments
+ */
+require get_stylesheet_directory() . '/inc/comments.php';
+
+/**
  * Setup Custom Post Types
  */
 require get_stylesheet_directory() . '/inc/cpt.php';
@@ -70,3 +75,4 @@ require get_stylesheet_directory() . '/inc/woocommerce.php';
  * @link https://codex.wordpress.org/Template_Tags
  */
 require get_stylesheet_directory() . '/inc/template-tags.php';
+/*

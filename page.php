@@ -21,8 +21,12 @@ get_header();
 
 			<?php
 
-			if( is_page( 'homepage' ) ) {
-					get_template_part( 'template-parts/content', 'home' );
+			if( is_page( 'think-daily' ) ) {
+					get_template_part( 'template-parts/content', 'td' );
+			}
+
+			elseif( is_page( 'think-daily-for-businesspeople' ) ) {
+					get_template_part( 'template-parts/content', 'td-business' );
 			}
 
 			else {

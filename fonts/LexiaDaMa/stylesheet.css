@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'LexiaDaMa';
+    src: url('lexiadama-webfont.eot');
+    src: url('lexiadama-webfont.eot?#iefix') format('embedded-opentype'),
+         url('lexiadama-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
