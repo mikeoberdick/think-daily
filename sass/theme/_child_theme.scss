@@ -1,0 +1,234 @@
+/*
+Theme Name:  WP-Understrap
+Theme URI:   https://github.com/mikeoberdick/wp-understrap
+Version:     1.0
+Description: A custom built theme based on Understrap by Holger.
+Author:      Designs 4 The Web
+Author URI:  http://designs4theweb.com
+Template:    Understrap
+*/
+
+/*------------------------------------------------*/
+/*-------------------[FONTS]----------------------*/
+/*------------------------------------------------*/
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+h1, h2, h3, h4, h5 {
+	color: $brand-primary;
+	font-family: $header-font;
+}
+
+h1 {  
+  font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem; 
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+}
+h2 {  
+  font-size: $mod_1*$mod_1*$mod_1 *1rem; 
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+}
+h3 { 
+  font-size: $mod_1*$mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
+}
+
+body {
+	color: #b2b2b2;
+	font-family: $body-font;
+}
+
+/*------------------------------------------------*/
+/*--------------------[LINKS]---------------------*/
+/*------------------------------------------------*/
+
+.current_page_item {
+	a {
+		color: $brand-primary;
+	}
+}
+
+/*------------------------------------------------*/
+/*-------------------[BUTTONS]--------------------*/
+/*------------------------------------------------*/
+
+.btn-primary {
+	font-family: $body-font;
+	text-transform: uppercase;
+	color: #fff !important;
+	background-color: $brand-primary !important;
+	border-color: $brand-primary !important;
+	@include border-radius(5px);
+}
+			
+.btn-primary {
+	&:hover {
+		background-color: lighten( $brand-primary, 10% ) !important;
+		border-color: $brand-primary !important;
+   	}
+  }
+
+/*------------------------------------------------*/
+/*--------------------[HEADER]--------------------*/
+/*------------------------------------------------*/
+
+#navbarNavDropdown {
+	justify-content: flex-end;
+}
+
+/*------------------------------------------------*/
+/*-------------------[MENU]-----------------------*/
+/*------------------------------------------------*/
+
+.mobileToggle {
+	color: $brand-primary;
+}
+
+/*------------------------------------------------*/
+/*----------------------[PAGES]-------------------*/
+/*------------------------------------------------*/
+
+
+/*------------------------------------------------*/
+/*--------------------[SIDEBAR]-------------------*/
+/*------------------------------------------------*/
+
+/*------------------------------------------------*/
+/*----------------------[ACF]---------------------*/
+/*------------------------------------------------*/
+
+.acf-map {
+    width: 100%;
+    height: 400px;
+    border: #ccc solid 1px;
+    margin: 20px 0;
+}
+
+/*------------------------------------------------*/
+/*--------------------[FORMS]-------------------*/
+/*------------------------------------------------*/
+
+.nf-form-cont {
+	.nf-form-fields-required {
+		display: none;
+	}
+
+	.fName {
+		float: left;
+		width: 48%;
+		margin-right: 2%;
+		clear: none;
+
+		@include media-breakpoint-down(md) { float: none; width: 100%; margin-right: 0; clear: both; }
+	}
+
+	.lName {
+		float: left;
+		width: 48%;
+		clear: none;
+
+		@include media-breakpoint-down(md) { float: none; width: 100%; clear: both; }
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  font-family: $header-font;
+	  font-size: 12px;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  font-family: $header-font;
+	  font-size: 12px;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	 font-family: $header-font;
+	 font-size: 12px;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  font-family: $header-font;
+	  font-size: 12px;
+	}
+}
+
+
+/*------------------------------------------------*/
+/*---------------------[FOOTER]-------------------*/
+/*------------------------------------------------*/
+
+#wrapper-footer {
+	color: $brand-secondary;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-transform: uppercase;
+	font-size: 12px;
+
+	#footerWidgets {
+		padding: 50px 0;
+	}
+
+	h5 {
+			padding-bottom: 5px;
+		    border-bottom: solid 2px;
+		    text-transform: uppercase;
+		    color: $brand-primary
+		}
+
+	ul {
+		padding-left: 0;
+		list-style: none;
+
+		li {
+			margin-bottom: 5px;
+
+			a {
+				color: $brand-primary;
+				text-transform: uppercase;
+				font-size: 12px;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+#bottomFooter {
+	background-color: $brand-primary;
+	color: #fff;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	box-shadow: inset 0 15px 5px -16px #111;
+
+	a {
+		color: #fff;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+/*------------------------------------------------*/
+/*--------------[RESPONSIVE/UTILITIES]------------*/
+/*------------------------------------------------*/
+
+@include media-breakpoint-up(xs) {  }
+@include media-breakpoint-up(sm) {  }
+@include media-breakpoint-up(md) {  }
+@include media-breakpoint-up(lg) {  }
+@include media-breakpoint-up(xl) {  }
+
+@include media-breakpoint-down(xs) {  }
+@include media-breakpoint-down(sm) {  }
+@include media-breakpoint-down(md) {  }
+@include media-breakpoint-down(lg) {  }
+
+@include media-breakpoint-only(xs) {  }
+@include media-breakpoint-only(sm) {  }
+@include media-breakpoint-only(md) {  }
+@include media-breakpoint-only(lg) {  }
+@include media-breakpoint-only(xl) {  }
+
+.hidden {
+	display: none;
+}
