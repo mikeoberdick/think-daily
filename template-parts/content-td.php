@@ -23,7 +23,7 @@ get_header(); ?>
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_logo.png" alt="Think Daily by Larry Janesky">
               <p>Think Daily, and Think Daily for Businesspeople are daily messages from Larry meant to motivate, educate, inspire, and question - but most of all, to invite you to THINK about the issues that are important to you each day.  Sign up today.</p>
 
-              <p>Click <a href="/think-daily-for-businesspeople">here</a> to view Think Daily for Businesspeople</p>
+              <p>Click <a href="/think-daily-for-businesspeople">here</a> to view Think Daily for Businesspeople.</p>
             </div><!-- .col.md-6 -->
             <div class="col-md-4 offset-md-1">
               <div id = "blogBlogSignup"">
@@ -51,8 +51,8 @@ get_header(); ?>
       <h2 id = "blogPageTitle">Today's Think Daily Message</h2>
       <?php 
       $args = array(
-        'category__not_in' => '2',
-        'posts_per_page' => '1',
+        'category_not_in' => '2',
+        'posts_per_page' => '1'
       );
       
       //Need to make sure comments are being pulled in for this query
@@ -66,8 +66,8 @@ get_header(); ?>
         <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
           <div id="featuredPostCard">
             <div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
-            <span class = "month"><?php echo get_the_date('M'); ?></span>
-            <span class = "day"><?php echo get_the_date('j'); ?></span>
+            <span class = "month"><?php echo get_the_date( 'M' ); ?></span>
+            <span class = "day"><?php echo get_the_date( 'j' ); ?></span>
           </div><!-- .postDate -->
            <h5 class = "postTitle"><a class = "postLauncher" href = "#" data-toggle="modal" data-target="#postModal" data-count="0"><?php the_title(); ?></a></h5>
             <p><?php echo get_the_excerpt(); ?></p>
@@ -108,8 +108,8 @@ get_header(); ?>
         <?php endif; ?>
         <div class="postCard">
           <div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
-          <span class = "month"><?php the_date('M'); ?></span>
-          <span class = "day"><?php the_date('j'); ?></span>
+          <span class = "month"><?php echo get_the_date( 'M' ); ?></span>
+            <span class = "day"><?php echo get_the_date( 'j' ); ?></span>
         </div><!-- .postDate -->
           <h5 class = "postTitle"><a class = "postLauncher" href = "#" data-toggle="modal" data-target="#postModal" data-count="<?php echo $postCount; ?>"><?php the_title(); ?></a></h5>
           <p><?php the_excerpt(); ?></p>
@@ -167,8 +167,8 @@ $postCount++; endwhile; endif;
                       </div><!-- .col-md-12 -->
                     </div><!--  .row -->
                     <div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
-                      <span class = "month"><?php the_date('M'); ?></span>
-                      <span class = "day"><?php the_date('j'); ?></span>
+                      <span class = "month"><?php echo get_the_date( 'M' ); ?></span>
+                      <span class = "day"><?php echo get_the_date( 'j' ); ?></span>
                     </div><!-- .postDate -->
                   </div><!-- #modalPostBodyContainer -->
 

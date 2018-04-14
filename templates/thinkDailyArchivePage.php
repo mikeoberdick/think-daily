@@ -28,7 +28,7 @@ get_header(); ?>
                         if($mn == date("m"))
                           { echo "<option selected value=" . $mn . ">" . $monthName[$i] . "</option> \n"; }
                         else
-                          { echo "<option value=" . $mn . ">" . $monthName[$i] . "</option> \n"; } } ?> 
+                          { echo "<option value=" . $mn . ">" . $monthName[$i] . "</option> \n"; } } ?>
                     </select>
                   </div><!-- .selectContainer -->
                     
@@ -36,7 +36,7 @@ get_header(); ?>
                       <select id = "year" name = "year">
                       <?php
                         $year = date("Y");
-                        $minYr = $year - 3;
+                        $minYr = $year - 7;
                         $maxYr = $year + 1;
                           echo $year;
                           echo "<br />" . $minYr . "<br />" . $maxYr . "<br />";
@@ -62,7 +62,7 @@ get_header(); ?>
     <?php
         $args = array(
           'category__not_in' => '2',
-          'posts_per_page' => '2'
+          'posts_per_page' => '10'
           );
         
         //Need to make sure comments are being pulled in for this query

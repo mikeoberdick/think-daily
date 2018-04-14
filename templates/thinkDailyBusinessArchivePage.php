@@ -36,7 +36,7 @@ get_header(); ?>
                       <select id = "year" name = "year">
                       <?php
                         $year = date("Y");
-                        $minYr = $year - 3;
+                        $minYr = $year - 7;
                         $maxYr = $year + 1;
                           echo $year;
                           echo "<br />" . $minYr . "<br />" . $maxYr . "<br />";
@@ -62,7 +62,7 @@ get_header(); ?>
     <?php
         $args = array(
           'cat' => '2',
-          'posts_per_page' => '2'
+          'posts_per_page' => '10'
           );
         
         //Need to make sure comments are being pulled in for this query
@@ -154,8 +154,8 @@ $wp_query = $temp_query;
                       </div><!-- .col-md-12 -->
                     </div><!--  .row -->
                     <div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
-                      <span class = "month"><?php the_date('M'); ?></span>
-                      <span class = "day"><?php the_date('j'); ?></span>
+                      <span class = "month"><?php echo get_the_date( 'M' ); ?></span>
+                      <span class = "day"><?php echo get_the_date( 'j' ); ?></span>
                     </div><!-- .postDate -->
                   </div><!-- #modalPostBodyContainer -->
 

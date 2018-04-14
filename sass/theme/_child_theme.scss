@@ -483,6 +483,10 @@ a {
 }
 
 #monthSelectContainer {
+	select {
+		width: 165px;
+	}
+	
 	&:after {
     	content: '\f078';
 	    font: normal normal normal 17px/1 FontAwesome;

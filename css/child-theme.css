@@ -10893,6 +10893,9 @@ a:hover {
       #archiveDropdowns #archiveDropdown #archiveFormSubmit:hover, #archiveDropdowns #businessArchiveDropdown #archiveFormSubmit:hover {
         text-decoration: none; }
 
+#monthSelectContainer select {
+  width: 165px; }
+
 #monthSelectContainer:after {
   content: '\f078';
   font: normal normal normal 17px/1 FontAwesome;
